@@ -29,9 +29,9 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost/fuberapp_prod?useUnicode=yes&characterEncoding=UTF-8"
-            username = "root"
-            password = "root"
+            url = "jdbc:mysql://sql6.freemysqlhosting.net?useUnicode=yes&characterEncoding=UTF-8"
+            username = "sql6122828"
+            password = "n1xY6TGGSf"
         }
     }
 }
