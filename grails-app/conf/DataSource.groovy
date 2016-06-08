@@ -29,7 +29,9 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://sql6.freemysqlhosting.net:3036?useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6122828?useUnicode=yes&characterEncoding=UTF-8"
+            driverClassName = "com.mysql.jdbc.Driver"
+            dialect = org.hibernate.dialect.MySQL5InnoDBDialect
             username = "sql6122828"
             password = "n1xY6TGGSf"
         }

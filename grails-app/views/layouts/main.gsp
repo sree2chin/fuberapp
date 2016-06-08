@@ -27,8 +27,6 @@
 		<title>Fuber app</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
@@ -41,17 +39,17 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>                        
 		      </button>
-		      <a class="navbar-brand" href="/fuberApp">
+		      <a class="navbar-brand" href="/">
 		      		Fuber
 		      </a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav">
-		        <li><a href="/fuberApp/cab/bookCab">Book cab</a></li>
-		        <li><a href="/fuberApp/cab/showCabs">Available cabs</a></li>
-		        <li><a href="/fuberApp/cab/bookedCabs">Booked cabs</a></li>
-		        <li><a href="/fuberApp/cab/index">Add cab</a></li>
-		        <li><a href="/fuberApp/customerRide/index">Rides</a></li>
+		        <li><a href="/cab/bookCab">Book cab</a></li>
+		        <li><a href="/cab/showCabs">Available cabs</a></li>
+		        <li><a href="/cab/bookedCabs">Booked cabs</a></li>
+		        <li><a href="/cab/index">Add cab</a></li>
+		        <li><a href="/customerRide/index">Rides</a></li>
 		      </ul>
 
 		    </div>

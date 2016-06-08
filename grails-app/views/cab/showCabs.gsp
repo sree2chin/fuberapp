@@ -6,6 +6,9 @@
 			button {
 				width: 100%;
 			}
+			.carImage {
+				width: 40%;
+			}
 		</style>
 		<script>
 			
@@ -16,7 +19,7 @@
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-9">
-				<table class="table table-condensed" id="fmaFormTable">
+				<table class="table table-bordered" id="fmaFormTable">
 				
               	<tbody>
               		<td>
@@ -39,7 +42,13 @@
               		<g:each in="${cabsList}" var="cab" status="i">
               			<tr>
               				<td>
-              					image
+              					<g:if test="${cab.color == 'pink'}">
+                  						<img src="http://img.diytrade.com/cdimg/177009/435368/0/1059473653/Pink_Princess_Pedal_Car.jpg" />
+                  				</g:if>
+                  				<g:else>
+                  					<img src="https://pixabay.com/static/uploads/photo/2014/04/03/10/27/car-310523_960_720.png" class = "carImage" />
+                  				</g:else>
+              					
               				</td>
               				<td>
               					${cab.name}

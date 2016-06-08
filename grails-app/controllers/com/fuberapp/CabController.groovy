@@ -36,7 +36,9 @@ class CabController {
     	cabInstance.name = requestJson.cabName
 		cabInstance.cabNumber = requestJson.cabNumber.toString()
 		cabInstance.driverPhoneNumber = requestJson.cabDriverPhoneNumber.toInteger()
-		cabInstance.isPink = requestJson.cabColorIsPink
+        if(requestJson.cabColorIsPink) {
+            cabInstance.color = "pink"
+        }
 		// setting starting location to (0,0)
 		cabInstance.currentLocationLatitude = 0
 		cabInstance.currentLocationLongitude = 0

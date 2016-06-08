@@ -9,12 +9,13 @@
 		</style>
 		<script>
 			$(document).on("click","#addRideButton",function() {
+				$('#cabNotFoundMessage').hide()
+				$('#cabErrorMessage').hide()
 				var inputJson = {}
 				var rideCustomerName = $('#rideCustomerName').val();
 				var rideLongitude = $('#rideLongitude').val();
 				var rideLatitude = $('#rideLatitude').val();
 				var rideColorIsPink = $('#rideColorIsPink').is(':checked');
-				debugger;
 				if(rideCustomerName && rideLongitude && rideLatitude) {
 					inputJson.rideCustomerName = rideCustomerName;
 					inputJson.rideLongitude = rideLongitude;
@@ -24,14 +25,20 @@
 			            cache: false,
 			            type: 'POST',
 			            async: true,
-			            url: "/fuberApp/customerRide/create",
+			            url: "/customerRide/create",
 			            data: JSON.stringify(inputJson),
 			            dataType: 'json',
 			            contentType: 'application/json; charset=utf-8',
 			            success: function (result, status, xhr) {
+			            	if(result.responseMessage) {
+			                	$('#cabNotFoundMessage').show()
+			                }
 			                console.log("success.")
 			            }.bind(this),
 			            error: function (xhr) {
+			            	if(result.responseMessage) {
+			                	$('#cabNotFoundMessage').show()
+			                }
 			            	console.log("error.")
 			            }.bind(this),
 			            complete: function(){
@@ -52,6 +59,9 @@
 			<div class = "col-md-9">
 				<div id = "cabErrorMessage" style = "display: none;">
 					please enter all fields
+				</div>
+				<div id = "cabNotFoundMessage" style = "display: none;">
+					cab not found
 				</div>
 				<form class="form-horizontal" role="form">
 				  <div class="form-group">

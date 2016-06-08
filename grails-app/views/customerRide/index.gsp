@@ -10,6 +10,7 @@
 		<script>
 			function endRide(rideId) {
 				$('#cabErrorMessage').hide()
+				
 				var inputJson = {}
 				var rideLatitude = $('#rideLatitude').val();
 				var rideLongitude = $('#rideLongitude').val();
@@ -21,12 +22,14 @@
 			            cache: false,
 			            type: 'POST',
 			            async: true,
-			            url: "/fuberApp/customerRide/update",
+			            url: "/customerRide/update",
 			            data: JSON.stringify(inputJson),
 			            dataType: 'json',
 			            contentType: 'application/json; charset=utf-8',
 			            success: function (result, status, xhr) {
 			                console.log("success")
+			                location.reload();
+			                
 			            }.bind(this),
 			            error: function (xhr) {
 			            	console.log("error")
@@ -47,6 +50,7 @@
 			<div id = "cabErrorMessage" style = "display: none;">
 					please enter all fields
 			</div>
+			
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-10">

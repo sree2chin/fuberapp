@@ -13,15 +13,23 @@ class CustomerRideController {
     }
 
     def create() {
+        println ".....................params.........."
+        println params
+        println "................requestJson"
+        println request.JSON
         def requestJson = request.JSON
 
     	def customerRideInstance = new CustomerRide()
     	def criteria = Cab.createCriteria()
     	def cabsList
-    	if(requestJson?.cabColorIsPink) {
-            cabsList = Cab.findAllByStatusAndIsPink("offRide", true)
+        println "coming here.........."
+    	if(requestJson?.rideColorIsPink) {
+            cabsList = Cab.findAllByStatusAndColor("offRide", "pink")
+            println ".............query result............"
+            println cabsList
         }
         else {
+            println "..................in else............."
             cabsList = Cab.findAllByStatus("offRide")
         }
         
@@ -31,7 +39,7 @@ class CustomerRideController {
         // find the nearest cab over here.
         def nearestAvailableCabId
         // Assuming the max distance as 10000000
-        def minDistance = Long.MAX_VALUE
+        def minDistance = 10000000
         // Assuming the user location, should replace with customer data
         int userLat = 100
         int userLog = 200
