@@ -40,8 +40,16 @@ class CabController {
     }
 
     def addCab() {
-        println "...............coming to add cab..........."
         def requestJson = request.JSON
+        def criteria = Cab.createCriteria()
+        def cabs = criteria.list{
+            eq("cabNumber", requestJson.cabNumber.toString())
+        }
+        if(cabs && cabs.size() > 0) {
+            render([success: false] as JSON)
+            return
+        }
+        
     	def cabInstance = new Cab()
     	cabInstance.name = requestJson.cabName
 		cabInstance.cabNumber = requestJson.cabNumber.toString()

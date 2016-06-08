@@ -10,7 +10,6 @@
 		<script>
 			function endRide(rideId) {
 				$('#cabErrorMessage').hide()
-				debugger;
 				var inputJson = {}
 				var rideLatitude = $('#rideLatitude').val();
 				var rideLongitude = $('#rideLongitude').val();
@@ -54,21 +53,26 @@
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-10">
+				<center><h3>
+					Choose location and click on end ride button to end the ride of corresponding customer
+				</h3></center>
 				<div class="form-group">
-				    <label class="control-label col-sm-3">Choose end latitude location</label>
-				    <div class="col-sm-9"> 
+				    <label class="control-label col-sm-3">Enter latitude</label>
+				    <div class="col-sm-7"> 
 				      <input type = "number" class="form-control" id = "rideLatitude" placeholder="Enter latitude">
 				    </div>
 				</div>
 				<br />
 				<div class="form-group">
-				    <label class="control-label col-sm-3">Choose end longitude location</label>
-				    <div class="col-sm-9"> 
+				    <label class="control-label col-sm-3">Enter longitude</label>
+				    <div class="col-sm-7"> 
 				      <input type = "number" class="form-control" id = "rideLongitude" placeholder="Enter longitude">
 				    </div>
 				</div>
 				<br />
-				<table class="table table-condensed" id="fmaFormTable">
+				<br />
+				<center><h1>Rides information</h1></center>
+				<table class="table table-bordered" id="fmaFormTable">
 				
               	<tbody>
 					<td>
@@ -124,7 +128,7 @@
               					${ride.status}
               				</td>
               				<td>
-              					${ride.priceOfTheRide}
+              					${ride.priceOfTheRide} dogecoins
               				</td>
               				<td>
               					<g:if test="${ride.status == 'onRide'}">

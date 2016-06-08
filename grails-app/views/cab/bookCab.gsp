@@ -12,12 +12,10 @@
 				$('#cabNotFoundMessage').hide()
 				$('#cabErrorMessage').hide()
 				var inputJson = {}
-				var rideCustomerName = $('#rideCustomerName').val();
 				var rideLongitude = $('#rideLongitude').val();
 				var rideLatitude = $('#rideLatitude').val();
 				var rideColorIsPink = $('#rideColorIsPink').is(':checked');
-				if(rideCustomerName && rideLongitude && rideLatitude) {
-					inputJson.rideCustomerName = rideCustomerName;
+				if(rideLongitude && rideLatitude) {
 					inputJson.rideLongitude = rideLongitude;
 					inputJson.rideLatitude = rideLatitude;
 					inputJson.rideColorIsPink = rideColorIsPink;
@@ -63,22 +61,18 @@
 				<div id = "cabNotFoundMessage" style = "display: none;">
 					cab not found
 				</div>
+				<center><h1>Choose the location and book a cab</h1></center>
 				<form class="form-horizontal" role="form">
+				  
 				  <div class="form-group">
-				    <label class="control-label col-sm-3">Name:</label>
-				    <div class="col-sm-9">
-				      <input type="text" class="form-control" id = "rideCustomerName" placeholder="Enter name">
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label class="control-label col-sm-3">Choose your latitude location</label>
+				    <label class="control-label col-sm-3">Enter your latitude location</label>
 				    <div class="col-sm-9"> 
 				      <input type = "number" class="form-control" id = "rideLatitude" placeholder="Enter latitude">
 				    </div>
 				  </div>
 
 				  <div class="form-group">
-				    <label class="control-label col-sm-3">Choose your longitude location</label>
+				    <label class="control-label col-sm-3">Enter your longitude location</label>
 				    <div class="col-sm-9"> 
 				      <input type = "number" class="form-control" id = "rideLongitude" placeholder="Enter longitude">
 				    </div>

@@ -109,6 +109,9 @@ class CustomerRideController {
         int travelDistance = Math.sqrt( (lat2-lat1) * (lat2-lat1) + (log2-log1) * (log2-log1) )
         Double price = travelDistance * 2
         price += (Math.abs(customerRideInstance.startTime.getTime() - (new Date().getTime()))/60000)
+        if(cabInstance.color == "pink") {
+            price += 5
+        }
         customerRideInstance.priceOfTheRide = price
         if(!customerRideInstance.save(flush: true, failOnError: true)){
             render([success: false] as JSON)

@@ -7,7 +7,7 @@
 				width: 100%;
 			}
 			.carImage {
-				width: 40%;
+				width: 30%;
 			}
 		</style>
 		<script>
@@ -19,6 +19,7 @@
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-9">
+				<center><h1>Available cabs</h1></center>
 				<table class="table table-bordered" id="fmaFormTable">
 				
               	<tbody>

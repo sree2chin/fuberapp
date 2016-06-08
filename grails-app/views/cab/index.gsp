@@ -23,7 +23,7 @@
 			            cache: false,
 			            type: 'POST',
 			            async: true,
-			            url: "/fuberapp/cab",
+			            url: "/fuberApp/fuberapp/cab",
 			            data: JSON.stringify(inputJson),
 			            dataType: 'json',
 			            contentType: 'application/json; charset=utf-8',
@@ -52,6 +52,7 @@
 				<div id = "cabErrorMessage" style = "display: none;">
 					please enter all fields
 				</div>
+				<center><h1>Add new cab</h1></center>
 				<form class="form-horizontal" role="form">
 				  <div class="form-group">
 				    <label class="control-label col-sm-3">Name:</label>
