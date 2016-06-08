@@ -10,7 +10,7 @@
 		<script>
 			function endRide(rideId) {
 				$('#cabErrorMessage').hide()
-				
+				debugger;
 				var inputJson = {}
 				var rideLatitude = $('#rideLatitude').val();
 				var rideLongitude = $('#rideLongitude').val();
@@ -20,9 +20,9 @@
 					inputJson.rideLongitude = rideLongitude;
 					$.ajax({
 			            cache: false,
-			            type: 'POST',
+			            type: 'PUT',
 			            async: true,
-			            url: "/customerRide/update",
+			            url: "/fuberApp/fuberapp/customerRide",
 			            data: JSON.stringify(inputJson),
 			            dataType: 'json',
 			            contentType: 'application/json; charset=utf-8',

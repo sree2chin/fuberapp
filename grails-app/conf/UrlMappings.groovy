@@ -9,5 +9,15 @@ class UrlMappings {
 
         "/"(view:"/index")
         "500"(view:'/error')
+
+        "/fuberapp/cab" {
+            controller = "cab"
+            action = [GET: "fetchAvailableCabs", POST: "addCab"]
+        }
+
+        "/fuberapp/customerRide" {
+            controller = "customerRide"
+            action = [GET: "getCustomerRides", POST: "create", PUT: "update"]
+        }
 	}
 }

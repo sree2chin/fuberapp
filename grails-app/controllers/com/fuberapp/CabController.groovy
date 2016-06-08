@@ -11,12 +11,21 @@ class CabController {
     	def cabsList = criteria.list{}
     	[cabsList: cabsList]
     }
+
     def showCabs() { 
         def criteria = Cab.createCriteria()
         def cabsList = criteria.list{
             eq("status", "offRide")
         }
         [cabsList: cabsList]
+    }
+
+    def fetchAvailableCabs() { 
+        def criteria = Cab.createCriteria()
+        def cabsList = criteria.list{
+            eq("status", "offRide")
+        }
+        render([cabsList: cabsList] as JSON)
     }
 
     def bookedCabs() { 
@@ -31,6 +40,7 @@ class CabController {
     }
 
     def addCab() {
+        println "...............coming to add cab..........."
         def requestJson = request.JSON
     	def cabInstance = new Cab()
     	cabInstance.name = requestJson.cabName

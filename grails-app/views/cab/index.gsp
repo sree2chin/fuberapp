@@ -23,7 +23,7 @@
 			            cache: false,
 			            type: 'POST',
 			            async: true,
-			            url: "/cab/addCab",
+			            url: "/fuberApp/fuberapp/cab",
 			            data: JSON.stringify(inputJson),
 			            dataType: 'json',
 			            contentType: 'application/json; charset=utf-8',

@@ -12,24 +12,23 @@ class CustomerRideController {
         [ridesList: ridesList]
     }
 
+    def getCustomerRides() {
+        def criteria = CustomerRide.createCriteria()
+        def ridesList = criteria.list{}
+        render([ridesList: ridesList] as JSON)
+    }
+
     def create() {
-        println ".....................params.........."
-        println params
-        println "................requestJson"
-        println request.JSON
         def requestJson = request.JSON
 
     	def customerRideInstance = new CustomerRide()
     	def criteria = Cab.createCriteria()
     	def cabsList
-        println "coming here.........."
     	if(requestJson?.rideColorIsPink) {
             cabsList = Cab.findAllByStatusAndColor("offRide", "pink")
-            println ".............query result............"
             println cabsList
         }
         else {
-            println "..................in else............."
             cabsList = Cab.findAllByStatus("offRide")
         }
         
