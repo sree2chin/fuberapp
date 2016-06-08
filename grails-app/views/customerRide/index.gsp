@@ -22,7 +22,7 @@
 			            cache: false,
 			            type: 'PUT',
 			            async: true,
-			            url: "/fuberApp/fuberapp/customerRide",
+			            url: "/fuberapp/customerRide",
 			            data: JSON.stringify(inputJson),
 			            dataType: 'json',
 			            contentType: 'application/json; charset=utf-8',

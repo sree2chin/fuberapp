@@ -25,7 +25,7 @@
 			            cache: false,
 			            type: 'POST',
 			            async: true,
-			            url: "/fuberApp/fuberapp/customerRide",
+			            url: "/fuberapp/customerRide",
 			            data: JSON.stringify(inputJson),
 			            dataType: 'json',
 			            contentType: 'application/json; charset=utf-8',
