@@ -94,20 +94,20 @@ CustomerRide:
 	String status
 
 Description:
-	Initially cabs can be added to the database using cabs api with default location, color, cab # etc.
+Initially cabs can be added to the database using cabs api with default location, color, cab # etc.
 
 
 
-	All available cabs will be shown under Available cabs section.
+All available cabs will be shown under Available cabs section.
 
 
 
-	Cab can be booked by the customer by giving the location and preferred color of the car as input and the nearest available preferred color cab will be allocated to him.
+Cab can be booked by the customer by giving the location and preferred color of the car as input and the nearest available preferred color cab will be allocated to him.
 
 
 
-	Booked cabs can be viewed under ‘Booked cabs’ tab.
+Booked cabs can be viewed under ‘Booked cabs’ tab.
 
-	Customer rides information can be viewed under ‘Rides’ tab and there is an option of ending the ride with the locations as input. After ending the ride the price will be calculated and shown on the ui
+Customer rides information can be viewed under ‘Rides’ tab and there is an option of ending the ride with the locations as input. After ending the ride the price will be calculated and shown on the ui
 
 
