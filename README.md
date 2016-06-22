@@ -59,7 +59,7 @@ sample request payLoad:
 
 Data modeling
 
-Cab:
+<b>Cab:</b>
 	String cabId
     	String name
 	String cabNumber
